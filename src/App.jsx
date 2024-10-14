@@ -1,10 +1,22 @@
+/**
+ * @copyright 2024 Aubry Nobel Niyonkuru
+ * @license Apache-2.0
+ */
+
+/**
+ * Components
+ */
+import Entete from "./components/Entete";
+import Hero from "./components/Hero";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-400">
-        Hello,world!
-      </h1>
-    </div>
+    <>
+      <Entete />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 };
 
