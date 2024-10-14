@@ -26,6 +26,32 @@ const ButtonPrimary = ({ href, target = "_self", label, icon, classes }) => {
     );
   }
 };
+// Outline Button
+const ButtonOutline = ({ href, target = "_self", label, icon, classes }) => {
+  if (href) {
+    return (
+      <a href={href} target={target} className={"btn btn-outline " + classes}>
+        {label}{" "}
+        {icon ? (
+          <span className="material-symbols-rounded" aria-hidden="true">
+            {icon}
+          </span>
+        ) : undefined}
+      </a>
+    );
+  } else {
+    return (
+      <button className={"btn btn-outline " + classes}>
+        {label}
+        {icon ? (
+          <span className="material-symbols-rounded" aria-hidden="true">
+            {icon}
+          </span>
+        ) : undefined}
+      </button>
+    );
+  }
+};
 ButtonPrimary.PropTypes = {
   label: PropTypes.string.isRequired,
   href: PropTypes.string,
@@ -33,5 +59,12 @@ ButtonPrimary.PropTypes = {
   icon: PropTypes.string,
   classes: PropTypes.string,
 };
+ButtonOutline.PropTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  icon: PropTypes.string,
+  classes: PropTypes.string,
+};
 
-export { ButtonPrimary };
+export { ButtonPrimary, ButtonOutline };

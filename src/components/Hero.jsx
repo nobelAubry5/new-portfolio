@@ -4,7 +4,7 @@
  */
 import Avatar from "../assets/aubry.png";
 import Avatar2 from "../assets/aubry_2.jpg";
-import { ButtonPrimary } from "./Bouton";
+import { ButtonPrimary, ButtonOutline } from "./Bouton";
 const Hero = () => {
   return (
     <section id="home" className="pt-28 lg:pt-36">
@@ -31,7 +31,12 @@ const Hero = () => {
             Building Scalable Modern Websites for the Future
           </h2>
           <div className="flex items-center gap-3">
-            <ButtonPrimary label="Download CV" icon="download" /> ButtonOutline
+            <ButtonPrimary label="Download CV" icon="download" />{" "}
+            <ButtonOutline
+              href="#about"
+              label="Scroll down"
+              icon="arrow_downward"
+            />
           </div>
         </div>
         <div className="hidden lg:block">

@@ -6,6 +6,7 @@
 /**
  * Components
  */
+import Apropos from "./components/Apropos";
 import Entete from "./components/Entete";
 import Hero from "./components/Hero";
 
@@ -15,6 +16,7 @@ const App = () => {
       <Entete />
       <main>
         <Hero />
+        <Apropos />
       </main>
     </>
   );
